@@ -31,8 +31,8 @@ class PlanetTableViewController: UITableViewController {
                                                                                               "Thirteen times a century Mercury can be observed from the Earth passing across the face of the Sun."])
             
             let venus = Planet(name: "Venus", numberOfMoons: 0, numberOfDays: 224.7, facts: ["Venus is the hottest planet. ",
-                                                                                          "Venus is the closets planet to Earth.",
-                                                                                          "One day on Venus is equivalent to 117 days of Earth!"])
+                                                                                          "Venus is the closest planet to Earth.",
+                                                                                          "One day on Venus is equivalent to 117 days on Earth!"])
             
             let earth = Planet(name: "Earth", numberOfMoons: 1, numberOfDays: 365.27, facts: ["Earth is the only planet that has an atmosphere containing 21 percent oxygen.",
                                                                                            "Earth is the only planet that has liquid water on its surface.",
@@ -50,7 +50,7 @@ class PlanetTableViewController: UITableViewController {
             
             let saturn = Planet(name: "Saturn", numberOfMoons: 18, numberOfDays: 10759.0, facts: ["Saturn's rings were first seen by Galileo in 1610 through a telescope.",
                                                                                                "Saturn has the second largest moon in the solar system, Titan.",
-                                                                                               "Saturn's rings may actually be composed of ice."  ])
+                                                                                               "Saturn's rings may actually be composed of ice. Whoa. ICE RINGS. "  ])
             
             let uranus = Planet(name: "Uranus", numberOfMoons: 27, numberOfDays: 30687.0, facts: ["Uranus was the first planet discovered by telescope.",
                                                                                                   "Uranus spins lying on its side, perhaps due to a large collision early in its formation.",
