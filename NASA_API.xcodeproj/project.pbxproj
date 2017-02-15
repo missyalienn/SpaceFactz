@@ -20,6 +20,8 @@
 		F63F17271DCB9A260036F26D /* NASADataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63F17261DCB9A260036F26D /* NASADataStore.swift */; };
 		F65EDF5D1E5400BF00B5B16F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EDF5C1E5400BF00B5B16F /* Planet.swift */; };
 		F65EDF5F1E5405C500B5B16F /* PlanetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EDF5E1E5405C500B5B16F /* PlanetTableViewController.swift */; };
+		F65EDF611E54CE8000B5B16F /* FactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EDF601E54CE8000B5B16F /* FactTableViewController.swift */; };
+		F65EDF631E54D9AD00B5B16F /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EDF621E54D9AD00B5B16F /* PlanetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		F63F17261DCB9A260036F26D /* NASADataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASADataStore.swift; sourceTree = "<group>"; };
 		F65EDF5C1E5400BF00B5B16F /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		F65EDF5E1E5405C500B5B16F /* PlanetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewController.swift; sourceTree = "<group>"; };
+		F65EDF601E54CE8000B5B16F /* FactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewController.swift; sourceTree = "<group>"; };
+		F65EDF621E54D9AD00B5B16F /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				F63F16F21DCB77CA0036F26D /* AppDelegate.swift */,
-				F63F16F41DCB77CA0036F26D /* ViewController.swift */,
-				F63F17201DCB78230036F26D /* NASAAPIClient.swift */,
-				F63F17241DCB835B0036F26D /* PicOfTheDay.swift */,
-				F65EDF5C1E5400BF00B5B16F /* Planet.swift */,
-				F65EDF5E1E5405C500B5B16F /* PlanetTableViewController.swift */,
-				F63F17261DCB9A260036F26D /* NASADataStore.swift */,
-				F63F17221DCB786F0036F26D /* Secrets.swift */,
 				F63F16F61DCB77CA0036F26D /* Main.storyboard */,
+				F65EDF641E54DAAA00B5B16F /* Model */,
+				F65EDF651E54DAB300B5B16F /* Controller */,
+				F65EDF621E54D9AD00B5B16F /* PlanetTableViewCell.swift */,
+				F63F17221DCB786F0036F26D /* Secrets.swift */,
 				F63F16F91DCB77CA0036F26D /* Assets.xcassets */,
 				F63F16FB1DCB77CA0036F26D /* LaunchScreen.storyboard */,
 				F63F16FE1DCB77CA0036F26D /* Info.plist */,
@@ -141,6 +142,27 @@
 				F63F17141DCB77CA0036F26D /* Info.plist */,
 			);
 			path = NASA_APIUITests;
+			sourceTree = "<group>";
+		};
+		F65EDF641E54DAAA00B5B16F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F63F16F41DCB77CA0036F26D /* ViewController.swift */,
+				F63F17261DCB9A260036F26D /* NASADataStore.swift */,
+				F63F17201DCB78230036F26D /* NASAAPIClient.swift */,
+				F63F17241DCB835B0036F26D /* PicOfTheDay.swift */,
+				F65EDF5C1E5400BF00B5B16F /* Planet.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F65EDF651E54DAB300B5B16F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F65EDF5E1E5405C500B5B16F /* PlanetTableViewController.swift */,
+				F65EDF601E54CE8000B5B16F /* FactTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +305,11 @@
 				F63F17271DCB9A260036F26D /* NASADataStore.swift in Sources */,
 				F63F16F51DCB77CA0036F26D /* ViewController.swift in Sources */,
 				F65EDF5D1E5400BF00B5B16F /* Planet.swift in Sources */,
+				F65EDF611E54CE8000B5B16F /* FactTableViewController.swift in Sources */,
 				F65EDF5F1E5405C500B5B16F /* PlanetTableViewController.swift in Sources */,
 				F63F17251DCB835B0036F26D /* PicOfTheDay.swift in Sources */,
 				F63F16F31DCB77CA0036F26D /* AppDelegate.swift in Sources */,
+				F65EDF631E54D9AD00B5B16F /* PlanetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
