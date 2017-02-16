@@ -12,22 +12,22 @@ class Planet {
     
     let name: String
     let numberOfMoons: Int
-    let numberOfDays: Float
+    let fullOrbit: Double
     let facts: [String]
     
-    
-    init(name: String, numberOfMoons: Int, numberOfDays: Float, facts: [String]) {
+    init(name: String, numberOfMoons: Int, fullOrbit: Double, facts: [String]) {
         
         self.name = name
         self.numberOfMoons = numberOfMoons
-        self.numberOfDays = numberOfDays
+        self.fullOrbit = fullOrbit
         self.facts = facts
         
     }
     
-    
-    
-    
-    
-    
 }
+
+var planets: [Planet] = []
+
+
+
+
