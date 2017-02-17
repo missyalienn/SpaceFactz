@@ -27,10 +27,15 @@ class PlanetDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.planetNameLabel.text = "\(planet.name)"
-        self.numOfMoonsLabel.text = "\(planet.numberOfMoons)"
-        self.numOfDaysLabel.text = "\(planet.fullOrbit) days (full orbit)"
+        if planet.numberOfMoons == 1 {
+            self.numOfMoonsLabel.text = "\(planet.numberOfMoons) moon 🌚"
+ 
+        }else{
+            self.numOfMoonsLabel.text = "\(planet.numberOfMoons) moons 🌚"
+        }
+        self.numOfDaysLabel.text = "\(planet.fullOrbit)  rdays full orbit"
         self.factsTextView.text = "\(planet.facts)"
-        
+        self.view.insertGradianPinkColor()
 
     }
 

@@ -15,6 +15,7 @@ class PlanetTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generatePlanetInfo()
+       self.tableView.insertGradianPinkColor()
     
     }
 
@@ -88,7 +89,8 @@ class PlanetTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "planetCell", for: indexPath)
         let planet = planets[indexPath.row]
         cell.textLabel?.text = planet.name
-        cell.backgroundColor = UIColor(red:0.60, green:0.40, blue:0.64, alpha:1.0)
+       cell.backgroundColor = UIColor.clear
+       // cell.backgroundColor = UIColor(red:0.60, green:0.40, blue:0.64, alpha:1.0)
         cell.textLabel?.textColor = UIColor.white
         //cell.textLabel?.text = planets[indexPath.row]
 
@@ -110,4 +112,31 @@ class PlanetTableViewController: UITableViewController {
     }
 
 }
+
+
+extension UIView {
+    
+    // create gradient color for the CreateAccount view
+    func insertGradianPinkColor() {
+        let firstColor = UIColor(red: 76/255, green: 48/255, blue: 57/255, alpha: 1).cgColor
+        let secondColor = UIColor(red: 158/255, green: 100/255, blue: 117/255, alpha: 1).cgColor
+        let thirdColor = UIColor(red: 255/255, green: 161/255, blue: 189/255, alpha: 1).cgColor
+        let gradian: CAGradientLayer
+        gradian = CAGradientLayer()
+        gradian.colors = [ firstColor,secondColor,thirdColor]
+        gradian.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradian.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradian.frame = self.frame
+        self.layer.insertSublayer(gradian, at: 0)
+        
+}
+}
+
+
+
+
+
+
+
+
 
