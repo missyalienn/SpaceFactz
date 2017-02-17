@@ -14,11 +14,23 @@ class PlanetTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isToolbarHidden = true
+        
         generatePlanetInfo()
        self.tableView.insertGradianPinkColor()
     
     }
 
+    
+    
+    
+    @IBAction func backPushed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
 
     func generatePlanetInfo() {
         
@@ -118,12 +130,10 @@ extension UIView {
     
     // create gradient color for the CreateAccount view
     func insertGradianPinkColor() {
-//        let firstColor = UIColor(red: 76/255, green: 48/255, blue: 57/255, alpha: 1).cgColor
-//        let secondColor = UIColor(red: 158/255, green: 100/255, blue: 117/255, alpha: 1).cgColor
-//        let thirdColor = UIColor(red: 255/255, green: 161/255, blue: 189/255, alpha: 1).cgColor
+
         let firstColor = UIColor(red:1.00, green:0.88, blue:0.33, alpha:1.0).cgColor
-        let secondColor = UIColor(red:1.00, green:0.74, blue:0.41, alpha:1.0).cgColor
-        let thirdColor = UIColor(red:0.95, green:0.56, blue:0.52, alpha:1.0).cgColor
+        let secondColor = UIColor(red:0.77, green:0.43, blue:0.62, alpha:1.0).cgColor
+        let thirdColor = UIColor(red:0.60, green:0.40, blue:0.64, alpha:1.0).cgColor
         let gradian: CAGradientLayer
         gradian = CAGradientLayer()
         gradian.colors = [ firstColor,secondColor,thirdColor]

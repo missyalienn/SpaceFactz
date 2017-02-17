@@ -25,6 +25,7 @@ class PlanetDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.themePink
         
         self.planetNameLabel.text = "\(planet.name)"
         if planet.numberOfMoons == 1 {
@@ -33,7 +34,7 @@ class PlanetDetailViewController: UIViewController {
         }else{
             self.numOfMoonsLabel.text = "\(planet.numberOfMoons) moons 🌚"
         }
-        self.numOfDaysLabel.text = "\(planet.fullOrbit)  rdays full orbit"
+        self.numOfDaysLabel.text = "\(planet.fullOrbit) days full orbit"
         self.factsTextView.text = "\(planet.facts)"
         self.view.insertGradianPinkColor()
 
