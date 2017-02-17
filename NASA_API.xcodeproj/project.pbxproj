@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60270F11E57531F005F4C1A /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60270F01E57531F005F4C1A /* CustomColors.swift */; };
 		F63F16F31DCB77CA0036F26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63F16F21DCB77CA0036F26D /* AppDelegate.swift */; };
 		F63F16F51DCB77CA0036F26D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63F16F41DCB77CA0036F26D /* ViewController.swift */; };
 		F63F16F81DCB77CA0036F26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63F16F61DCB77CA0036F26D /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F60270F01E57531F005F4C1A /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		F63F16EF1DCB77CA0036F26D /* NASA_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63F16F21DCB77CA0036F26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F63F16F41DCB77CA0036F26D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				F6A9ECB21E5631BC0063E362 /* PlanetDetailViewController.swift */,
 				F63F16F41DCB77CA0036F26D /* ViewController.swift */,
 				F6C1096C1E561D7C00AC3873 /* PlanetTableViewController.swift */,
+				F60270F01E57531F005F4C1A /* CustomColors.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				F63F17271DCB9A260036F26D /* NASADataStore.swift in Sources */,
 				F63F16F51DCB77CA0036F26D /* ViewController.swift in Sources */,
 				F65EDF5D1E5400BF00B5B16F /* Planet.swift in Sources */,
+				F60270F11E57531F005F4C1A /* CustomColors.swift in Sources */,
 				F6C1096D1E561D7C00AC3873 /* PlanetTableViewController.swift in Sources */,
 				F63F17251DCB835B0036F26D /* PicOfTheDay.swift in Sources */,
 				F63F16F31DCB77CA0036F26D /* AppDelegate.swift in Sources */,
