@@ -8,17 +8,22 @@
 
 import UIKit
 
-class PlanetDetailViewController: UIViewController {
+class PlanetDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var planet: Planet!
+    
+    
+    @IBOutlet weak var factsTableView: UITableView!
+    
+    
+    
     
     @IBOutlet weak var planetNameLabel: UILabel!
     
     @IBOutlet weak var numOfMoonsLabel: UILabel!
     
     @IBOutlet weak var numOfDaysLabel: UILabel!
-    
-    @IBOutlet weak var factsTextView: UITextView!
+
     
 
     
@@ -26,6 +31,7 @@ class PlanetDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.themePink
+        self.factsTableView.backgroundColor = UIColor.clear
         
         self.planetNameLabel.text = "\(planet.name)"
         if planet.numberOfMoons == 1 {
@@ -35,7 +41,6 @@ class PlanetDetailViewController: UIViewController {
             self.numOfMoonsLabel.text = "\(planet.numberOfMoons) moons 🌚"
         }
         self.numOfDaysLabel.text = "\(planet.fullOrbit) days full orbit"
-        self.factsTextView.text = "\(planet.facts)"
         self.view.insertGradianPinkColor()
 
     }
@@ -47,7 +52,32 @@ class PlanetDetailViewController: UIViewController {
     
     
     
+    // MARK: TableView DataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return planet.facts.count
+    }
+   
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "factCell")
+        let fact = planet.facts[indexPath.row]
+        cell?.textLabel?.text = fact
+         cell?.backgroundColor = UIColor.clear
+        cell?.textLabel?.textColor = UIColor.themeSunshine
+        
+        
+        
+        
+        return cell!
+    }
+    
+    
+    
 }
+
+
+
 
 
 
