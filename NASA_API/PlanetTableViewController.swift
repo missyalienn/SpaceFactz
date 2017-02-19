@@ -15,7 +15,6 @@ class PlanetTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isToolbarHidden = true
-        
         generatePlanetInfo()
        self.tableView.insertGradianPinkColor()
     
@@ -34,17 +33,17 @@ class PlanetTableViewController: UITableViewController {
 
     func generatePlanetInfo() {
         
-        let mercury = Planet(name: "Mercury", numberOfMoons: 0, fullOrbit: 87.96, facts: ["Mercury is an airless world, not unlike our moon.",
-                                                                                          "Mercury is the closest planet to the sun.",
-                                                                                          "Thirteen times a century Mercury can be observed from the Earth passing across the face of the S4,333un."])
+        let mercury = Planet(name: "Mercury", numberOfMoons: 0, fullOrbit: 87.96, facts: ["An airless world, not unlike our moon.",
+                                                                                          "The closest planet to the sun.",
+                                                                                          " Mercury can be observed from the Earth passing across the face of the Sun."])
         
         let venus = Planet(name: "Venus", numberOfMoons: 0, fullOrbit: 224.7, facts: ["Venus is the hottest planet. ",
                                                                                       "Venus is the closets planet to Earth.",
-                                                                                      "One day on Venus is equivalent to 117 days of Earth!"])
+                                                                                      "One day on Venus is equal to 117 days on Earth!"])
         
-        let earth = Planet(name: "Earth", numberOfMoons: 1, fullOrbit: 365.27, facts: ["Earth is the only planet that has an atmosphere containing 21 percent oxygen.",
-                                                                                       "Earth is the only planet that has liquid water on its surface.",
-                                                                                       "Earth is the only planet in the solar system that has life that we know of." ])
+        let earth = Planet(name: "Earth", numberOfMoons: 1, fullOrbit: 365.27, facts: ["The only planet that has an atmosphere containing 21 percent oxygen.",
+                                                                                       "The only planet that has liquid water on its surface.",
+                                                                                       "The only planet in the solar system that has life that we know of." ])
         
         let mars = Planet(name: "Mars", numberOfMoons: 2, fullOrbit: 687.0, facts: ["Mars and Earth have approximately the same landmass.",
                                                                                     "Mars is home to the tallest mountain in the solar system.",
@@ -88,7 +87,6 @@ class PlanetTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 

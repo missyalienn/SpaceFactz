@@ -65,8 +65,9 @@ class PlanetDetailViewController: UIViewController, UITableViewDelegate, UITable
         cell?.textLabel?.text = fact
          cell?.backgroundColor = UIColor.clear
         cell?.textLabel?.textColor = UIColor.themeSunshine
-        
-        
+        cell?.textLabel?.numberOfLines = 0
+         cell?.textLabel?.lineBreakMode = .byWordWrapping
+       // cell?.textLabel?.adjustsFontSizeToFitWidth = true
         
         
         return cell!
