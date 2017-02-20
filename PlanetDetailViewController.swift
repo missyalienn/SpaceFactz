@@ -13,15 +13,10 @@ class PlanetDetailViewController: UIViewController, UITableViewDelegate, UITable
     var planet: Planet!
     
     
+    @IBOutlet weak var planetImage: UIImageView!
     @IBOutlet weak var factsTableView: UITableView!
-    
-    
-    
-    
     @IBOutlet weak var planetNameLabel: UILabel!
-    
     @IBOutlet weak var numOfMoonsLabel: UILabel!
-    
     @IBOutlet weak var numOfDaysLabel: UILabel!
 
     
@@ -49,6 +44,24 @@ class PlanetDetailViewController: UIViewController, UITableViewDelegate, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    //MARK: return UIImage 
+//    func getPlanetImage(planet: String) -> UIImage {
+//        
+//        switch planet {
+//        case "Mercurty":
+//            return UIImage(data: #imageLiteral(resourceName: "mercuryTransit"))!
+//        case "Venus"
+//        default:
+//            break
+//        }
+//    }
+//    
+//    
+    
+    
+    
     
     
     

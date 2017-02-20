@@ -181,37 +181,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="numOfMoonsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyv-fG-C9x">
-                                <rect key="frame" x="78" y="214" width="203" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.88810675760000002" green="0.82932339929999999" blue="0.28830033900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="numOfDaysLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-jo-l41">
-                                <rect key="frame" x="78" y="290" width="203" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <color key="textColor" red="0.88810675760000002" green="0.82932339929999999" blue="0.28830033900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="planetNameLable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-ZU-3xJ">
-                                <rect key="frame" x="78" y="138" width="203" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <color key="textColor" red="0.88810675760000002" green="0.82932339929999999" blue="0.28830033900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-3A-ssm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-3A-ssm">
                                 <rect key="frame" x="16" y="383" width="343" height="264"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="factCell" rowHeight="72" id="Hov-c8-n5e">
                                         <rect key="frame" x="0.0" y="28" width="343" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hov-c8-n5e" id="FPs-O0-Vqi">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -221,14 +199,50 @@
                                     <outlet property="delegate" destination="ekN-Qk-VSL" id="HkL-qo-iFy"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OaG-HE-TEP">
+                                <rect key="frame" x="16" y="72" width="343" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QmL-gN-ebi">
+                                <rect key="frame" x="47.5" y="282" width="280" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="planetNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-ZU-3xJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" red="0.88810675760000002" green="0.82932339929999999" blue="0.28830033900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numOfMoonsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyv-fG-C9x">
+                                        <rect key="frame" x="0.0" y="43" width="212" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.88810675760000002" green="0.82932339929999999" blue="0.28830033900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numOfDaysLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-jo-l41">
+                                        <rect key="frame" x="0.0" y="73" width="192.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.88810675760000002" green="0.82932339929999999" blue="0.28830033900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jbu-3A-ssm" secondAttribute="bottom" constant="20" symbolic="YES" id="2rl-u9-Hc7"/>
+                            <constraint firstItem="Jbu-3A-ssm" firstAttribute="trailing" secondItem="Llc-2F-Wsn" secondAttribute="trailingMargin" id="37V-20-Fal"/>
+                            <constraint firstItem="QmL-gN-ebi" firstAttribute="centerX" secondItem="Jbu-3A-ssm" secondAttribute="centerX" id="AH7-PC-cf4"/>
+                            <constraint firstItem="Jbu-3A-ssm" firstAttribute="top" secondItem="jgS-Zr-S5C" secondAttribute="bottom" constant="319" id="XMc-mG-MjP"/>
+                            <constraint firstItem="QmL-gN-ebi" firstAttribute="centerY" secondItem="Llc-2F-Wsn" secondAttribute="centerY" id="ZJL-SU-z9R"/>
+                            <constraint firstItem="Jbu-3A-ssm" firstAttribute="leading" secondItem="Llc-2F-Wsn" secondAttribute="leadingMargin" id="kDf-x1-yq5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PlanetFacts" id="3a6-eV-syr"/>
                     <connections>
                         <outlet property="factsTableView" destination="Jbu-3A-ssm" id="22a-kX-xwa"/>
                         <outlet property="numOfDaysLabel" destination="Ppm-jo-l41" id="VIY-QR-b5x"/>
                         <outlet property="numOfMoonsLabel" destination="zyv-fG-C9x" id="hIO-Tn-Cf3"/>
+                        <outlet property="planetImage" destination="OaG-HE-TEP" id="6Wy-uH-ZOy"/>
                         <outlet property="planetNameLabel" destination="Afg-ZU-3xJ" id="FYu-Ar-wqC"/>
                     </connections>
                 </viewController>

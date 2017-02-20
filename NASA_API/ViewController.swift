@@ -44,6 +44,8 @@ class ViewController: UIViewController {
                     self.picOfTheDay.image = image
                     self.dateLabel.text = "\(data["date"]!)"
                     self.imageTitle.text = "\(data["title"]!)"
+                    self.imageTitle.lineBreakMode = .byWordWrapping
+                    self.imageTitle.numberOfLines = 0 
                     self.imageExplanation.text = "\(data["explanation"]!)"
                 }
                
