@@ -14,13 +14,18 @@ class PicOfTheDay {
     var date: String
     var explanation: String
     var title: String
-    var image: UIImage?
+   // var image: UIImage?
+    var imgUrl: String
+    var mediaType: String
     
     init(data: [String: String]) {
         
-        self.date = data["date"]!
-        self.explanation = data["explanation"]!
-        self.title = data["title"]!
+        self.date = data["date"] ?? ""
+        self.explanation = data["explanation"] ?? ""
+        self.title = data["title"] ?? ""
+        self.mediaType = data["media_type"] ?? ""
+        self.imgUrl = data["url"] ?? ""
+        
       
     }
     

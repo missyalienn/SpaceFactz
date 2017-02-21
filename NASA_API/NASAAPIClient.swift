@@ -60,7 +60,15 @@ class NASAAPIClient {
         
         let task = session.dataTask(with: request) { data, response, error in
             
-            guard let data = data, let image = UIImage(data: data) else { completion(false, nil); return }
+            guard let data = data else {
+                print("bad data")
+                return
+            }
+          guard let image = UIImage(data: data) else { completion(false, nil);
+            
+            print("Bad image")
+            return
+        }
     
            completion(true, image)
         

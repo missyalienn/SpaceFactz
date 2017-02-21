@@ -7,24 +7,30 @@
 //
 
 import Foundation
-
+import UIKit
 class Planet {
     
     let name: String
     let numberOfMoons: Int
     let fullOrbit: Double
-    let facts: [String]
+    var facts: [String]
+    var planetImage: UIImage?
     
-    init(name: String, numberOfMoons: Int, fullOrbit: Double, facts: [String]) {
+    init(name: String, numberOfMoons: Int, fullOrbit: Double, facts: [String], planetImage: UIImage? = nil ) {
         
         self.name = name
         self.numberOfMoons = numberOfMoons
         self.fullOrbit = fullOrbit
         self.facts = facts
+        self.planetImage = planetImage
         
     }
+
     
 }
+
+
+
 
 var planets: [Planet] = []
 

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     
     @IBOutlet weak var staticTitle: UILabel!
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageExplanation: UITextView!
     
     @IBOutlet weak var picOfTheDay: UIImageView!
-
+    
     @IBOutlet weak var moreSpace: UIButton!
     
     
@@ -32,34 +32,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isToolbarHidden = true
-       
-      NASAAPIClient.getDataFromAPI { (data) in
-     
-        NASAAPIClient.downloadImage(at: data["url"]!, completion: { (success, image) in
-            
-            if success == true {
-                print("got image data from URL")
-                
-                DispatchQueue.main.async {
-                    self.picOfTheDay.image = image
-                    self.dateLabel.text = "\(data["date"]!)"
-                    self.imageTitle.text = "\(data["title"]!)"
-                    self.imageTitle.lineBreakMode = .byWordWrapping
-                    self.imageTitle.numberOfLines = 0 
-                    self.imageExplanation.text = "\(data["explanation"]!)"
-                }
-               
-            } else {
-                print ("Error getting image")
-            }
-    
-            
-        })
+        getPictureOfTheDay()
         
-        }
-    
     }
-
-
-
+    
+    
+    func getPictureOfTheDay() {
+        NASAAPIClient.getDataFromAPI { (data) in
+            let potd = PicOfTheDay(data: data)
+            DispatchQueue.main.async {
+                self.dateLabel.text = potd.date
+                self.imageTitle.text = potd.title
+                self.imageTitle.lineBreakMode = .byWordWrapping
+                self.imageTitle.numberOfLines = 0
+                self.imageExplanation.text = potd.explanation
+            }
+            if potd.mediaType == "video" {
+                print("its a video")
+                //set default image
+            } else {
+                NASAAPIClient.downloadImage(at: potd.imgUrl, completion: { (success, image) in
+                    if success == true {
+                        print("got image data from URL")
+                        DispatchQueue.main.async {
+                            self.picOfTheDay.image = image
+                        }
+                    } else {
+                        print ("Error getting image")
+                    }
+                })
+            }
+        }
+    }
+    
+    
 }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 
 class NASADataStore {
@@ -17,7 +17,7 @@ class NASADataStore {
     var date: String!
     var explanation: String!
     var title: String!
-
+    var planetImages: [UIImage] = [#imageLiteral(resourceName: "mercuryTransit"), #imageLiteral(resourceName: "venus-7"), #imageLiteral(resourceName: "Earth"), #imageLiteral(resourceName: "mars"), #imageLiteral(resourceName: "jupiter"), #imageLiteral(resourceName: "saturnnasa"), #imageLiteral(resourceName: "uranusvoyager2"), #imageLiteral(resourceName: "neptuneNASA")]
 
     private init() {}
     

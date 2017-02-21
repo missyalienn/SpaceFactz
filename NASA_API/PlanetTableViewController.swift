@@ -11,12 +11,14 @@ class PlanetTableViewController: UITableViewController {
 
     
     var planets =  [Planet]()
+    var planetImage: UIImage!
+    let store = NASADataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isToolbarHidden = true
         generatePlanetInfo()
-       self.tableView.insertGradianPinkColor()
+       self.tableView.insertGradientPinkColor()
     
     }
 
@@ -109,7 +111,9 @@ class PlanetTableViewController: UITableViewController {
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedPlanet = planets[indexPath.row]
+        selectedPlanet.planetImage = store.planetImages[indexPath.row]
         performSegue(withIdentifier: "showDetail", sender: selectedPlanet)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -118,6 +122,9 @@ class PlanetTableViewController: UITableViewController {
             let dest = segue.destination as! PlanetDetailViewController
            let selectedPlanet = sender as! Planet
             dest.planet = selectedPlanet
+            
+            
+            
         }
     }
 
@@ -127,18 +134,18 @@ class PlanetTableViewController: UITableViewController {
 extension UIView {
     
     // create gradient color for the CreateAccount view
-    func insertGradianPinkColor() {
+    func insertGradientPinkColor() {
 
         let firstColor = UIColor(red:1.00, green:0.88, blue:0.33, alpha:1.0).cgColor
         let secondColor = UIColor(red:0.77, green:0.43, blue:0.62, alpha:1.0).cgColor
         let thirdColor = UIColor(red:0.60, green:0.40, blue:0.64, alpha:1.0).cgColor
-        let gradian: CAGradientLayer
-        gradian = CAGradientLayer()
-        gradian.colors = [ firstColor,secondColor,thirdColor]
-        gradian.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradian.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradian.frame = self.frame
-        self.layer.insertSublayer(gradian, at: 0)
+        let gradient: CAGradientLayer
+        gradient = CAGradientLayer()
+        gradient.colors = [ firstColor,secondColor,thirdColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradient.frame = self.frame
+        self.layer.insertSublayer(gradient, at: 0)
         
 }
 }
