@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SpaceFactz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNz-mp-SyG">
+                                <rect key="frame" x="41" y="112" width="293" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="UNw-66-tTM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceFactzIconBig" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-2a-km3">
+                                <rect key="frame" x="5" y="174" width="354" height="342"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.22352941179999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z4J-2a-km3" firstAttribute="top" secondItem="nNz-mp-SyG" secondAttribute="bottom" constant="8" symbolic="YES" id="4cM-VO-2md"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Z4J-2a-km3" secondAttribute="bottom" constant="151" id="ISr-Zq-MN1"/>
+                            <constraint firstItem="nNz-mp-SyG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="25" id="MaE-0I-KbT"/>
+                            <constraint firstItem="nNz-mp-SyG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="92" id="Y8O-n6-aWg"/>
+                            <constraint firstItem="nNz-mp-SyG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="j5Q-0H-6db"/>
+                            <constraint firstItem="Z4J-2a-km3" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="mPD-vO-X1n"/>
+                            <constraint firstItem="Z4J-2a-km3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-11" id="wuQ-tU-doM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SpaceFactzIconBig" width="1024" height="1024"/>
+    </resources>
 </document>

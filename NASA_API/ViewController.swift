@@ -49,7 +49,9 @@ class ViewController: UIViewController {
             }
             if potd.mediaType == "video" {
                 print("its a video")
-                //set default image
+              let defaultImage = #imageLiteral(resourceName: "saturnnasa")
+              self.picOfTheDay.image = defaultImage
+                
             } else {
                 NASAAPIClient.downloadImage(at: potd.imgUrl, completion: { (success, image) in
                     if success == true {

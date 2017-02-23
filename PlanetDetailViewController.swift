@@ -54,13 +54,10 @@ class PlanetDetailViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "factCell")
         let fact = planet.facts[indexPath.row]
         cell?.textLabel?.text = fact
-         cell?.backgroundColor = UIColor.clear
+        cell?.backgroundColor = UIColor.clear
         cell?.textLabel?.textColor = UIColor.themeSunshine
         cell?.textLabel?.numberOfLines = 0
-         cell?.textLabel?.lineBreakMode = .byWordWrapping
-       // cell?.textLabel?.adjustsFontSizeToFitWidth = true
-        
-        
+        cell?.textLabel?.lineBreakMode = .byWordWrapping
         return cell!
     }
     
@@ -68,18 +65,4 @@ class PlanetDetailViewController: UIViewController, UITableViewDelegate, UITable
     
 }
 
-
-
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 

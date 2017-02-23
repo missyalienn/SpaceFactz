@@ -133,7 +133,7 @@ class PlanetTableViewController: UITableViewController {
 
 extension UIView {
     
-    // create gradient color for the CreateAccount view
+    // create gradient color for the view
     func insertGradientPinkColor() {
 
         let firstColor = UIColor(red:1.00, green:0.88, blue:0.33, alpha:1.0).cgColor
