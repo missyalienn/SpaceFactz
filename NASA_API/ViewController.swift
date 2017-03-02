@@ -68,4 +68,29 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    
+    
+    
+    @IBAction func shareBttnPressed(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [self.picOfTheDay.image], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
